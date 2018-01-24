@@ -17,7 +17,7 @@ class Parser
     /Torchy/,
     /Via 313/,
     /Walgreens/,
-    /Walmart/,
+    /Grocery/,
     /Waterloo/
   ]
 
@@ -61,7 +61,7 @@ class Parser
           @db.execute('insert into cookies (datetime, location) values (?, ?)', [datetime.to_s, location])
           body = 'Cookie alert: ' + location + ' ' + datetime.to_s
           @log.info 'Sending alert ' + body
-          #@client.api.account.messages.create(from: config['twilio']['from'], to: config['twilio']['to'], body: body)
+          @client.api.account.messages.create(from: @from, to: @to, body: body) unless ENV['TEST']
         rescue SQLite3::ConstraintException => e
           @log.debug 'constraint violation - already reported on ' + location + ' ' + datetime.to_s
         end

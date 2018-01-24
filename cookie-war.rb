@@ -6,7 +6,6 @@ require './parser'
 config = YAML.load_file 'cookie-war.yaml'
 
 if ENV['TEST']
-  p 'test'
   available = File.open('available_page_sample.html') { |f| Nokogiri::HTML(f) }
   parser = Parser.new
   parser.parse available
