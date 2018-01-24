@@ -1,0 +1,8 @@
+auth:
+  email: your@email.com
+  password: password
+twilio:
+  account_sid: sid
+  auth_token: auth
+  from: '+15121234567'
+  to: '+15121234567'

@@ -1,0 +1,920 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+
+
+</head>
+<body>
+<div class="container">
+	<nav class="navbar navbar-inverse ">
+	 <div class="container-fluid">
+
+		 <!-- Brand and toggle get grouped for better mobile display -->
+		 <div class="navbar-header">
+			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+				 <span class="sr-only">Toggle navigation</span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+				 <span class="icon-bar"></span>
+			 </button>
+			 <a class="navbar-brand" href="/">OHSU Cookie Booths</a>
+		 </div>
+
+		 <!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav">
+						<li ><a href="/dashboard">Dashboard</a></li>
+ 						<li ><a href="/booths">Your Booths</a></li>
+						<li  class="active" ><a href="/available">Available Booths</a></li>
+						<li ><a href="/locations">Booth Locations</a></li>
+						<li ><a href="/reports">Booth Reports</a></li>
+					</ul>
+											<ul class="nav navbar-nav navbar-right">
+				 					 <li class="dropdown">
+						 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Michelle Cervenka <span class="caret"></span></a>
+						 <ul class="dropdown-menu" role="menu">
+							<li><a href="/auth/logout">Logout</a></li>
+						 </ul>
+					 </li>
+				 				</ul>
+		 </div><!-- /.navbar-collapse -->
+	 </div><!-- /.container-fluid -->
+	</nav>
+
+		<div class="col-md-9">
+
+
+
+	<div class="panel panel-default">
+			<div class="panel-heading">
+				 Available Booths
+			</div>
+
+			<div class="panel-body">
+										<table id="available" class="table table-striped booth-table">
+
+							<!-- Table Headings -->
+							<thead>
+									<th>Date</th>
+									<th>Time</th>
+									<th>Location</th>
+									<th></th>
+							</thead>
+
+							<!-- Table Body -->
+							<tbody>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway/Valero</div>
+										</td>
+										<td>
+											<form action="/available/3124" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway/Valero</div>
+										</td>
+										<td>
+											<form action="/available/3125" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:00 pm - 6:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>5 Guys</div>
+										</td>
+										<td>
+											<form action="/available/3191" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>3:30 pm - 5:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>TCBY</div>
+										</td>
+										<td>
+											<form action="/available/3207" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>AT&amp;T</div>
+										</td>
+										<td>
+											<form action="/available/3219" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:00 pm - 6:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Lamb&#039;s Tire &amp; Automotive - Walmart Parking Lot</div>
+										</td>
+										<td>
+											<form action="/available/3273" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>3:30 pm - 5:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Staples</div>
+										</td>
+										<td>
+											<form action="/available/3300" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Oasis Day Spa &amp; Nails</div>
+										</td>
+										<td>
+											<form action="/available/3325" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Serranos</div>
+										</td>
+										<td>
+											<form action="/available/3380" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3393" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3394" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Thundercloud Subs (Wm Cannon - Across from HEB)</div>
+										</td>
+										<td>
+											<form action="/available/3407" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Thundercloud Subs (Wm Cannon - Across from HEB)</div>
+										</td>
+										<td>
+											<form action="/available/3408" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Coffee Bean - Slaughter Lane</div>
+										</td>
+										<td>
+											<form action="/available/6011" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/24/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Coffee Bean - Slaughter Lane</div>
+										</td>
+										<td>
+											<form action="/available/6012" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/25/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway/Valero</div>
+										</td>
+										<td>
+											<form action="/available/3126" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/25/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:00 pm - 6:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>5 Guys</div>
+										</td>
+										<td>
+											<form action="/available/3192" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/25/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3395" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/25/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>AT&amp;T</div>
+										</td>
+										<td>
+											<form action="/available/3786" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/25/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Coffee Bean - Slaughter Lane</div>
+										</td>
+										<td>
+											<form action="/available/6013" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/25/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Coffee Bean - Slaughter Lane</div>
+										</td>
+										<td>
+											<form action="/available/6014" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/26/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>3:30 pm - 5:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Staples</div>
+										</td>
+										<td>
+											<form action="/available/3302" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/26/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3397" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/27/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>9:00 am - 11:00 am</div>
+										</td>
+										<td class="table-text">
+											<div>Subway/Valero</div>
+										</td>
+										<td>
+											<form action="/available/3739" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/27/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:00 pm - 6:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway/Valero</div>
+										</td>
+										<td>
+											<form action="/available/3741" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/27/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>9:00 am - 11:00 am</div>
+										</td>
+										<td class="table-text">
+											<div>Supercuts (Arbor Trails)</div>
+										</td>
+										<td>
+											<form action="/available/3857" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/27/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Thundercloud Subs (Wm Cannon - Across from HEB)</div>
+										</td>
+										<td>
+											<form action="/available/3878" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/27/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>8:00 am - 10:00 am</div>
+										</td>
+										<td class="table-text">
+											<div>Lamb&#039;s Tire &amp; Automotive - Walmart Parking Lot</div>
+										</td>
+										<td>
+											<form action="/available/4012" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/27/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>12:00 pm - 2:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Lamb&#039;s Tire &amp; Automotive - Walmart Parking Lot</div>
+										</td>
+										<td>
+											<form action="/available/4014" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/28/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>2:00 pm - 4:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>AT&amp;T</div>
+										</td>
+										<td>
+											<form action="/available/3960" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/29/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Oasis Day Spa &amp; Nails</div>
+										</td>
+										<td>
+											<form action="/available/3852" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/29/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3867" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/29/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:00 pm - 6:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Lamb&#039;s Tire &amp; Automotive - Walmart Parking Lot</div>
+										</td>
+										<td>
+											<form action="/available/4017" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/29/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Coffee Bean - Slaughter Lane</div>
+										</td>
+										<td>
+											<form action="/available/6028" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/30/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>AT&amp;T</div>
+										</td>
+										<td>
+											<form action="/available/3963" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/30/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Bird&#039;s Barbershop</div>
+										</td>
+										<td>
+											<form action="/available/6186" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/31/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3872" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>01/31/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Bird&#039;s Barbershop</div>
+										</td>
+										<td>
+											<form action="/available/6187" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>02/01/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>4:30 pm - 6:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway</div>
+										</td>
+										<td>
+											<form action="/available/3873" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>02/01/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>5:00 pm - 7:00 pm</div>
+										</td>
+										<td class="table-text">
+											<div>AT&amp;T</div>
+										</td>
+										<td>
+											<form action="/available/3965" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+																	<tr>
+										<td class="table-text">
+											<div>02/02/2018</div>
+										</td>
+
+										<td class="table-text">
+											<div>6:30 pm - 8:30 pm</div>
+										</td>
+										<td class="table-text">
+											<div>Subway/Valero</div>
+										</td>
+										<td>
+											<form action="/available/3757" method="POST">
+												<input type="hidden" name="_token" value="jrQ79UzSsVJ2jM18fyQyWJsuXVT4F45dATnTPiZG">
+												<input type="hidden" name="_method" value="PUT">
+
+												<button>Take</button>
+											</form>
+										</td>
+									</tr>
+															</tbody>
+						</table>
+								 </div>
+		</div>
+
+
+	</div>
+</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
+	<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript">
+		$('#sidebar').affix({
+			offset: {
+				top: $('header').height()
+			}
+		});
+	</script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#available').DataTable();
+		});
+	</script>
+</body>
+</html>
