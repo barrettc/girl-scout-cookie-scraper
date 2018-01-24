@@ -1,5 +1,4 @@
 require 'mechanize'
-require 'sqlite3'
 require 'yaml'
 require './parser'
 
