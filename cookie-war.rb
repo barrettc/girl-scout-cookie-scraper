@@ -14,10 +14,10 @@ else
   a.get('http://ohsucookies.com/auth/login') do |page|
 
     my_page = page.form_with(:action => '/auth/login') do |form|
-      username_field = form.field_with(:name => "email")
-      username_field.value = auth.email
-      password_field = form.field_with(:name => "password")
-      password_field.value = auth.password
+      username_field = form.field_with(:name => 'email')
+      username_field.value = config['auth']['email']
+      password_field = form.field_with(:name => 'password')
+      password_field.value = config['auth']['password']
     end.click_button
 
     available = my_page.link_with(href: /available/).click()
