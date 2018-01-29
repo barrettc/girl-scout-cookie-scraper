@@ -10,7 +10,7 @@ if ENV['TEST']
   parser.parse available
 else
   a = Mechanize.new
-  a.get('http://ohsucookies.com/auth/login') do |page|
+  a.get(config['auth']['url']) do |page|
 
     my_page = page.form_with(:action => '/auth/login') do |form|
       username_field = form.field_with(:name => 'email')

@@ -1,6 +1,7 @@
 auth:
   email: your@email.com
   password: password
+  url: http://whatever.com
 twilio:
   account_sid: sid
   auth_token: auth

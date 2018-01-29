@@ -49,10 +49,13 @@ class Parser
     re = Regexp.union(HIT_LIST)
     doc.search('table').first.css('tr').each do |row|
       date = row.css('td')[0].text.gsub!(/[\n\r\t]/, '')
+      date = date.split(' ')[0]
       times = row.css('td')[1].text.gsub!(/[\n\r\t\s]/, '')
       time = times.split('-')[0]
       location = row.css('td')[2].text.gsub!(/[\n\r\t]/, '')
-      datetime = DateTime.strptime(date + ' ' + time, '%m/%d/%Y %H:%M%P')
+      @log.debug(date)
+      @log.debug(time)
+      datetime = DateTime.strptime(date + ' ' + time, '%Y-%m-%d %H:%M%P')
       @log.info 'found ' + location + ' at ' + datetime.to_s
       if location.match(re)
         # it's a hit so see if we have a db entry
