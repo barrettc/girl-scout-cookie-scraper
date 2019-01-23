@@ -11,7 +11,7 @@ class Parser
     /Flores/,
     /Great Clips/,
     /Jack Allen/,
-    /Kerby Lane/,
+    /Kerbey Lane/,
     /Randall/,
     /Serranos/,
     /Torchy/,
@@ -20,7 +20,8 @@ class Parser
     /Grocery/,
     /Waterloo/,
     /Sam/,
-    /Bagel/
+    /Bagel/,
+    /Walmart/
   ]
 
   def initialize
