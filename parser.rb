@@ -18,7 +18,9 @@ class Parser
     /Via 313/,
     /Walgreens/,
     /Grocery/,
-    /Waterloo/
+    /Waterloo/,
+    /Sam/,
+    /Bagel/
   ]
 
   def initialize
