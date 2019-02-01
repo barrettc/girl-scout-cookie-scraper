@@ -21,7 +21,8 @@ class Parser
     /Waterloo/,
     /Sam/,
     /Bagel/,
-    /Walmart/
+    /Walmart/,
+    /Petco/
   ]
 
   def initialize
